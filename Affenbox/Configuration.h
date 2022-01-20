@@ -41,8 +41,8 @@
 *Sample All in One
 */
  #define buttonPause A0
- #define buttonUp A4
- #define buttonDown A3
+ #define buttonUp A2
+ #define buttonDown A1
 
 /**
 *Sample Affenbox Pocket
@@ -63,7 +63,7 @@
 /**
 *Für die Verwendung von fünf Buttons, statt drei.
 */
-#define FIVEBUTTONS    
+//#define FIVEBUTTONS    
 
 #if defined FIVEBUTTONS
 /**
@@ -358,7 +358,7 @@ static const uint8_t ANALOG_INPUT_BUTTON_MAP[ANALOG_INPUT_BUTTON_COUNT + 1 ] = {
 *Als zusätzliche Funktion, kann diese durch fading den Staus genauer wiedergeben.
 */
 
-//#define POWER_ON_LED    
+#define POWER_ON_LED    
 
 #if defined POWER_ON_LED
 
@@ -367,9 +367,13 @@ static const uint8_t ANALOG_INPUT_BUTTON_MAP[ANALOG_INPUT_BUTTON_COUNT + 1 ] = {
 *Es kann jeder freie  Pin geählt werden, auch Analoge.
 *Ausgeschlossen sind folgende Pins: 4, 9, 10, A7, sowie bereits durch andere Funktionen vergeneben Pins.
  */
-#define POWER_ON_LED_PIN 5
+#define POWER_ON_LED_PIN 6
 
-//#define FADING_LED 
+#define FADING_LED 
+// Maximale Helligkeit 1 bis 255
+#define LED_MAX 255
+// Geschwindigkeit: Änderung alle 100 ms um Wert 1 bis 255
+#define LED_DELTA 10
 
 #endif
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
