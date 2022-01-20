@@ -2419,7 +2419,9 @@ void setup()
   digitalWrite(SPEAKER_SWITCH_PIN, HIGH);
 #endif
 
-#if defined POWER_ON_LED
+#if defined FADING_LED
+  analogWrite(POWER_ON_LED_PIN, LED_MAX);
+#elif defined POWER_ON_LED
   digitalWrite(POWER_ON_LED_PIN, HIGH);
 #endif
 
@@ -4575,11 +4577,10 @@ digitalWrite(7, LOW);
 void fadeStatusLed(bool isPlaying)
 {
   static bool statusLedDirection = false;
-  static int16_t statusLedValue = 255;
+  static int16_t statusLedValue = LED_MAX;
   static unsigned long statusLedOldMillis;
-  static int16_t statusLedDeltaValuePause = 500;
-  static int16_t statusLedDeltaValuePlay = 1;
-  static int16_t statusLedDeltaValue = 10;
+  static int16_t statusLedMax = LED_MAX;
+  static int16_t statusLedDeltaValue = LED_DELTA;
 
   if (isPlaying)
   {
@@ -4587,32 +4588,30 @@ void fadeStatusLed(bool isPlaying)
   }
   else
   {
-    statusLedDeltaValue = statusLedDeltaValuePause;
-  }
-
   if ((millis() - statusLedOldMillis) >= 100)
-  {
-    statusLedOldMillis = millis();
-    if (statusLedDirection)
-    {
-      statusLedValue += statusLedDeltaValue;
-      if (statusLedValue >= 255)
-      {
-        statusLedValue = 255;
-        statusLedDirection = !statusLedDirection;
+   {
+     statusLedOldMillis = millis();
+     if (statusLedDirection)
+     {
+       statusLedValue += statusLedDeltaValue;
+       if (statusLedValue >= statusLedMax)
+       {
+         statusLedValue = statusLedMax;
+         statusLedDirection = !statusLedDirection;
+       }
+     }
+     else
+     {
+       statusLedValue -= statusLedDeltaValue;
+       if (statusLedValue <= 0)
+       {
+         statusLedValue = 0;
+         statusLedDirection = !statusLedDirection;
+       }
       }
     }
-    else
-    {
-      statusLedValue -= statusLedDeltaValue;
-      if (statusLedValue <= 0)
-      {
-        statusLedValue = 0;
-        statusLedDirection = !statusLedDirection;
-      }
-    }
-    analogWrite(POWER_ON_LED_PIN, statusLedValue);
   }
+    analogWrite(POWER_ON_LED_PIN, statusLedValue);
 }
 #endif
 //////////////////////////////////////////////////////////////////////////
