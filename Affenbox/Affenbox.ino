@@ -4584,7 +4584,7 @@ void fadeStatusLed(bool isPlaying)
 
   if (isPlaying)
   {
-    statusLedDeltaValue = statusLedDeltaValuePlay;
+    statusLedDeltaValue = statusLedMax;
   }
   else
   {
