@@ -340,3 +340,8 @@ void fadeStatusLed(bool isPlaying);
 class Mp3Notify;
 
 static DFMiniMp3<SoftwareSerial, Mp3Notify> mp3(mySoftwareSerial);
+
+static uint16_t tracksInFolder[99];
+static const uint8_t TRACKNUMBER_SILENCE = 0;
+
+uint16_t getFolderTrackCount(uint16_t folder);
