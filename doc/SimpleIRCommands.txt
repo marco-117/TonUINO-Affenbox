@@ -1,0 +1,20 @@
+Simple IR Remote Control
+Protocol: NEC
+
+1: 0x45 ShortcutTrigger0
+2: 0x46 ShortcutTrigger1
+3: 0x47 ShortcutTrigger2
+4: 0x44 ShortcutTrigger3
+5: 0x40 ShortcutTrigger4
+6: 0x43 ShortcutTrigger5
+7: 0x7  ShortcutTrigger6
+8: 0x15 ShortcutTrigger7
+9: 0x9  ShortcutTrigger8
+0: 0x19 ShortcutTrigger9
+*: 0x16 AdminMenuTrigger
+#: 0xD  AbortTrigger
+<: 0x8  PreviousTrigger
+>: 0x5A NextTrigger
+v: 0x52 VolumeDownTrigger
+^: 0x18 VolumeUpTrigger
+OK:0x1C PauseTrackTrigger

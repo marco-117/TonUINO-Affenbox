@@ -1,0 +1,12 @@
+   #########################ToDo########################
+   next Track handling verbessern, DFPlayer Meldung als input trigger behandeln
+   Verbesserung des zufall generators
+   A/B Seite
+   Alterssperre
+   Sleepmodifier, Lautstärke ausfaden lassen
+   Neopixel LED als Status einfügen
+   Always Queue, verienfachung next & prevTrack
+   Jukebox Modifier: Rndom Track bis RFID aufgelegt, dann einen Track aus RFID und weiter mit Random
+   Memory: Modifier karte, die mit einem Satz memory RFID Tags mehrere Motive zulässt
+   Impulswahltelefon
+   Sleepmodifier mit definierter Lautstärke

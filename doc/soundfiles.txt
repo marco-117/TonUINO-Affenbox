@@ -1,0 +1,392 @@
+0001.mp3|1
+0002.mp3|2
+0003.mp3|3
+0004.mp3|4
+0005.mp3|5
+0006.mp3|6
+0007.mp3|7
+0008.mp3|8
+0009.mp3|9
+0010.mp3|10
+0011.mp3|11
+0012.mp3|12
+0013.mp3|13
+0014.mp3|14
+0015.mp3|15
+0016.mp3|16
+0017.mp3|17
+0018.mp3|18
+0019.mp3|19
+0020.mp3|20
+0021.mp3|21
+0022.mp3|22
+0023.mp3|23
+0024.mp3|24
+0025.mp3|25
+0026.mp3|26
+0027.mp3|27
+0028.mp3|28
+0029.mp3|29
+0030.mp3|30
+0031.mp3|31
+0032.mp3|32
+0033.mp3|33
+0034.mp3|34
+0035.mp3|35
+0036.mp3|36
+0037.mp3|37
+0038.mp3|38
+0039.mp3|39
+0040.mp3|40
+0041.mp3|41
+0042.mp3|42
+0043.mp3|43
+0044.mp3|44
+0045.mp3|45
+0046.mp3|46
+0047.mp3|47
+0048.mp3|48
+0049.mp3|49
+0050.mp3|50
+0051.mp3|51
+0052.mp3|52
+0053.mp3|53
+0054.mp3|54
+0055.mp3|55
+0056.mp3|56
+0057.mp3|57
+0058.mp3|58
+0059.mp3|59
+0060.mp3|60
+0061.mp3|61
+0062.mp3|62
+0063.mp3|63
+0064.mp3|64
+0065.mp3|65
+0066.mp3|66
+0067.mp3|67
+0068.mp3|68
+0069.mp3|69
+0070.mp3|70
+0071.mp3|71
+0072.mp3|72
+0073.mp3|73
+0074.mp3|74
+0075.mp3|75
+0076.mp3|76
+0077.mp3|77
+0078.mp3|78
+0079.mp3|79
+0080.mp3|80
+0081.mp3|81
+0082.mp3|82
+0083.mp3|83
+0084.mp3|84
+0085.mp3|85
+0086.mp3|86
+0087.mp3|87
+0088.mp3|88
+0089.mp3|89
+0090.mp3|90
+0091.mp3|91
+0092.mp3|92
+0093.mp3|93
+0094.mp3|94
+0095.mp3|95
+0096.mp3|96
+0097.mp3|97
+0098.mp3|98
+0099.mp3|99
+0100.mp3|100
+0101.mp3|101
+0102.mp3|102
+0103.mp3|103
+0104.mp3|104
+0105.mp3|105
+0106.mp3|106
+0107.mp3|107
+0108.mp3|108
+0109.mp3|109
+0110.mp3|110
+0111.mp3|111
+0112.mp3|112
+0113.mp3|113
+0114.mp3|114
+0115.mp3|115
+0116.mp3|116
+0117.mp3|117
+0118.mp3|118
+0119.mp3|119
+0120.mp3|120
+0121.mp3|121
+0122.mp3|122
+0123.mp3|123
+0124.mp3|124
+0125.mp3|125
+0126.mp3|126
+0127.mp3|127
+0128.mp3|128
+0129.mp3|129
+0130.mp3|130
+0131.mp3|131
+0132.mp3|132
+0133.mp3|133
+0134.mp3|134
+0135.mp3|135
+0136.mp3|136
+0137.mp3|137
+0138.mp3|138
+0139.mp3|139
+0140.mp3|140
+0141.mp3|141
+0142.mp3|142
+0143.mp3|143
+0144.mp3|144
+0145.mp3|145
+0146.mp3|146
+0147.mp3|147
+0148.mp3|148
+0149.mp3|149
+0150.mp3|150
+0151.mp3|151
+0152.mp3|152
+0153.mp3|153
+0154.mp3|154
+0155.mp3|155
+0156.mp3|156
+0157.mp3|157
+0158.mp3|158
+0159.mp3|159
+0160.mp3|160
+0161.mp3|161
+0162.mp3|162
+0163.mp3|163
+0164.mp3|164
+0165.mp3|165
+0166.mp3|166
+0167.mp3|167
+0168.mp3|168
+0169.mp3|169
+0170.mp3|170
+0171.mp3|171
+0172.mp3|172
+0173.mp3|173
+0174.mp3|174
+0175.mp3|175
+0176.mp3|176
+0177.mp3|177
+0178.mp3|178
+0179.mp3|179
+0180.mp3|180
+0181.mp3|181
+0182.mp3|182
+0183.mp3|183
+0184.mp3|184
+0185.mp3|185
+0186.mp3|186
+0187.mp3|187
+0188.mp3|188
+0189.mp3|189
+0190.mp3|190
+0191.mp3|191
+0192.mp3|192
+0193.mp3|193
+0194.mp3|194
+0195.mp3|195
+0196.mp3|196
+0197.mp3|197
+0198.mp3|198
+0199.mp3|199
+0200.mp3|200
+0201.mp3|201
+0202.mp3|202
+0203.mp3|203
+0204.mp3|204
+0205.mp3|205
+0206.mp3|206
+0207.mp3|207
+0208.mp3|208
+0209.mp3|209
+0210.mp3|210
+0211.mp3|211
+0212.mp3|212
+0213.mp3|213
+0214.mp3|214
+0215.mp3|215
+0216.mp3|216
+0217.mp3|217
+0218.mp3|218
+0219.mp3|219
+0220.mp3|220
+0221.mp3|221
+0222.mp3|222
+0223.mp3|223
+0224.mp3|224
+0225.mp3|225
+0226.mp3|226
+0227.mp3|227
+0228.mp3|228
+0229.mp3|229
+0230.mp3|230
+0231.mp3|231
+0232.mp3|232
+0233.mp3|233
+0234.mp3|234
+0235.mp3|235
+0236.mp3|236
+0237.mp3|237
+0238.mp3|238
+0239.mp3|239
+0240.mp3|240
+0241.mp3|241
+0242.mp3|242
+0243.mp3|243
+0244.mp3|244
+0245.mp3|245
+0246.mp3|246
+0247.mp3|247
+0248.mp3|248
+0249.mp3|249
+0250.mp3|250
+0251.mp3|251
+0252.mp3|252
+0253.mp3|253
+0254.mp3|254
+0255.mp3|255
+0297.mp3|Oh, ein unbekannter Shortcut 
+0298.mp3|Ok, probieren wir was anderes.
+0300.mp3|Oh, eine neue Karte!
+0301.mp3|Wähle eine Ordner mit der Vor- und Zurücktaste aus. Mit Pause bestätigen.
+0305.mp3|OK, wähle nun einen Wiedergabemodus mit der Vor- und Zurücktaste aus. Mit Pause bestätigen.
+0306.mp3|Hörspielmodus. Gibt einen zufälligen Titel wieder und stoppt danach. Für einen neuen Titel muss die Karte erneut aufgelegt werden.
+0307.mp3|Albummodus. Gibt den kompletten Ordner wieder und stoppt nach dem letzten Titel.
+0308.mp3|Party Modus. Ordner zufällig wiedergeben.
+0309.mp3|Einzel Modus. Eine bestimmte Datei im Ordner wiedergeben.
+0310.mp3|Hörbuch Modus. Gibt den kompletten Ordner wieder und speichert den Fortschritt. Stoppt nach dem letzten Titel.
+0311.mp3|Admin Funktionen.
+0312.mp3|Hörspiel Von-Bis. Gibt einen zufälligen Titel zwischen der Start- und Enddatei wieder und stoppt danach. Für einen neuen Titel muss die Karte erneut aufgelegt werden.
+0313.mp3|Album Von-Bis. Gibt alles zwischen Start und Endtitel wieder und stoppt nach dem letzten Titel.
+0314.mp3|Party Von-Bis. Alle Dateien zwischen der Start und Enddatei zufällig wiedergeben.
+0315.mp3|Hörbuch Von-Bis. Gibt alles zwischen Start und Endtitel wieder und speichert den Fortschritt. Stoppt nach dem letzten Titel.
+0316.mp3|Puzzle Teil. Wird für die Spiele Puzzle und Quiz benötigt. Spielt im Normalbetrieb die Audiodatei einzeln ab.
+0320.mp3|OK, wähle nun die Datei mit der Vor- und Zurücktaste aus.
+0321.mp3|OK, wähle nun die Startdatei mit der Vor- und Zurücktaste aus.
+0322.mp3|Ok, wähle nun die Enddatei mit der Vor- und Zurücktaste aus.
+0323.mp3|OK, wähle nun den Titel für das Puzzleteil mit der Vor- und Zurücktaste aus. Mit Pause bestätigen.
+0324.mp3|Wähle die Puzzleteilnummer mit der Vor- und Zurücktaste aus. Mit Pause bestätigen.
+0400.mp3|Ich habe die Einstellungen übernommen.
+0401.mp3|Oh weh! Das hat leider nicht geklappt!
+0407.mp3|Willkommen beim Puzzeln! Du hast verschiedene Puzzleteile vor dir, die du korrekt zusammenfügen musst. Um zu erfahren ob sie zusammen passen, lege ein beliebiges erstes Teil auf und danach das zweite. Du hörst dann ob sie passen oder nicht. Und jetzt kannst du los legen.
+0408.mp3|Willkommen beim Quiz! Ich spiele jetzt nacheinander verschiedene Fragen oder Geräusche. Du musst dazu die passende Karte auflegen. Wenn du keine passende Karte findest, kannst du mit einem langen Druck auf die Vor- und Zurücktaste die nächste Frage oder das nächste Gräusch abspielen lassen. Jetzt wünsche ich viel Spaß und hier die erste Frage. 
+0409.mp3|Du hast alle Fragen beantwortet. Bis zum nächsten Mal!
+0410.mp3|Willkommen beim Rechnnen üben! Ich stelle dir eine Aufgabe und du kannst mit der Vor- und Zurücktaste dein Ergebnis eingeben. Mit der Pausetaste bestätigst du deine Auswahl.
+0411.mp3|Wie viel ist?
+0412.mp3|Plus
+0413.mp3|Minus
+0414.mp3|Mal
+0415.mp3|geteilt durch
+0416.mp3|ist
+0420.mp3|Das ist richtig!
+0421.mp3|Das ist leider falsch!
+0423.mp3|Wähle die gewünschte Rechenart mit der Vor- und Zurücktaste aus. Mit Pause bestätigen.
+0424.mp3|Addition
+0425.mp3|Subtraktion
+0426.mp3|Multiplikation
+0427.mp3|Division
+0428.mp3|Alle Rechenarten
+0429.mp3|OK, wähle nun die Zahl bis zu der gerrechnet werden soll mit der Vor- und Zurücktaste aus. Mit Pause bestätigen.
+0800.mp3|Bitte lege nun die Karte auf!
+0802.mp3|OK, ich habe den Vorgang beendet.
+0825.mp3|Möchtest du alle Einstellungen löschen?
+0826.mp3|Möchtest du die bisherigen Einstellungen löschen?
+0827.mp3|Diese Einstellung benötigt ein analoges Eingabemedium. Dieses muss im Programmcode aktiviert werden.
+0828.mp3|Mit der Vor- und Zurücktaste können die einzelnen Funktionen ausgewählt werden, die mit der analogen Eingabe verknüpft werden sollen. Mit der Pause Taste wird das anlernen der Funktion gestartet. Ein langer Druck auf die Pausetaste beendet das Anlernen. 
+0829.mp3|Betätige und halte das Eingabemedium jetzt gedrückt!
+0830.mp3|Das Eingabemedium wieder loslassen, beziehungsweise in den Leerlaufzustand versetzen.
+0831.mp3|Diese Einstellung benötigt einen Infrarotempfänger. Dieser muss im Programmcode aktiviert werden.
+0832.mp3|Mit der Vor- und Zurücktaste können die einzelnen Funktionen ausgewählt werden, die mit der Fernbedienung verknüpft werden sollen. Mit der Pause Taste wird das anlernen der Funktion gestartet. Ein langer Druck auf die Pausetaste beendet das Anlernen. 
+0833.mp3|Bitte jetzt die Taste auf der Fernbedienung drücken.
+0834.mp3|Wähle die Funktion aus.
+0835.mp3|Pause
+0836.mp3|Vor
+0837.mp3|Um 10 vor
+0838.mp3|Zurück
+0839.mp3|Um 10 zurück
+0840.mp3|Lauter
+0841.mp3|Leiser
+0842.mp3|Ausschalten
+0843.mp3|Adminmenü
+0844.mp3|Auf ersten Track springen und Titelspeicher zurück setzen.
+0845.mp3|Modifikation entfernen
+0846.mp3|Shortcut
+0847.mp3|Mit der Vor- und Zurücktaste kann ausgewählt werden, ob das analoge Eingabemedium seinen Zustand als kurzen Impuls schickt, im Beispiel Taster, oder dauerhaft anliegt, im Beispiel Drehschalter. Mit Pause bestätigen.
+0848.mp3|Welcher Signaltyp wird benutzt.
+0849.mp3|Impuls
+0850.mp3|Dauerhaftes Signal
+0900.mp3|Willkommen im Admin Menü. Bitte wähle eine Einstellung mit der Vor- und Zurücktaste aus und bestätige sie mit der Pausetaste! Ein langer Druck auf die Pausetaste bricht das Menü ab.
+0901.mp3|Karte neu konfigurieren.
+0902.mp3|Maximale Lautstärke festlegen.
+0903.mp3|Minimale Lautstärke festlegen.
+0904.mp3|Startlautstärke festlegen.
+0905.mp3|EQ konfigurieren.
+0906.mp3|Shortcuts konfigurieren.
+0907.mp3|Timer konfigurieren.
+0908.mp3|Einzelkarten für einen Ordner erstellen.
+0909.mp3|Tastenfunktion in der drei Tasten Variante umdrehen.
+0910.mp3|Stopp bei entfernter Karte.
+0911.mp3|Analoge Eingänge anlernen.
+0912.mp3|Analoger Eingangstyp wählen.
+0913.mp3|Fernbedienung anlernen.
+0914.mp3|Einstellungen zurück setzen.
+0915.mp3|Sperren des Adminmenüs.
+0920.mp3|Wähle eine EQ Einstellung mit der Vor- und Zurücktaste aus. Mit Pause bestätigen.
+0921.mp3|Normal
+0922.mp3|Pop
+0923.mp3|Rock
+0924.mp3|Jazz
+0925.mp3|Classic
+0926.mp3|Bass
+0930.mp3|Wähle eine maximale Lautstärke mit der Vor- und Zurücktaste aus. Mit Pause bestätigen.
+0931.mp3|Wähle eine minimale Lautstärke mit der Vor- und Zurücktaste aus. Mit Pause bestätigen.
+0932.mp3|Wähle eine start Lautstärke mit der Vor- und Zurücktaste aus. Mit Pause bestätigen.
+0933.mp3|Möchtest du die Funktion der Tasten umdrehen?
+0934.mp3|Nein.
+0935.mp3|Ja.
+0936.mp3|OK, bitte lege nun nacheinander die Karten auf die Box. Ich werde die jeweilige Nummer vorher ansagen, damit du nicht durcheinander kommst. Zum Abbrechen einfach eine der Lautstärketasten drücken!
+0937.mp3|Möchtest du den Track stoppen wenn die Karte enfernt wird?
+0940.mp3|Wähle eine Shortcut Nummer mit der Vor- und Zurücktaste aus. Mit Pause bestätigen.
+0941.mp3|Wähle mit der Vor- und Zurücktaste aus was sie werden soll. Mit Pause bestätigen.
+0942.mp3|Eine Wiedergabe
+0943.mp3|Eine Modifikation
+0944.mp3|Löschen
+0960.mp3|Nach wievielen Minuten soll der TonUINO ausgeschaltet werden?
+0961.mp3|5 Minuten.
+0962.mp3|15 Minuten.
+0963.mp3|30 Minuten.
+0964.mp3|60 Minuten.
+0965.mp3|nicht automatisch abschalten
+0966.mp3|Wähle eine Modifikation mit der Vor- und Zurücktaste aus. Mit Pause bestätigen.
+0967.mp3|Schlummermodus
+0968.mp3|Stopptanz. TonUINO spielt Stopptanz mit dir und hält zufällig für dich die Wiedergabe kurz an.
+0969.mp3|TonUINO Sperren
+0970.mp3|Krabbler-Modus. Alle Tasten vom TonUINO werden für die ganz Kleinen gesperrt. Karten funktionieren weiterhin.
+0971.mp3|KiTa-Modus. Damit es keinen Streit mehr gibt werden neue Karten nicht sofort gespielt sondern erst nachdem das aktuelle Lied vorbei ist. Die Vor- und Zurücktasten sind gesperrt.
+0972.mp3|Titel wiederholen. den aktuellen Titel endlos wiederholen.
+0973.mp3|Puzzle Spiel. Ein Spiel, dass nach auflegen eines Puzzle Teils, das dazugehörige Gegenstück erwartet.
+0974.mp3|Quiz. Ein Spiel, dass aus dem gespeicherten Ordner eine zufällige Audiodatei abspielt und das Puzzlteil mit der selben Puzzle Teilnummer, wie die der Audiodatei, erwartet.
+0975.mp3|Button Smash. Ein Spiel, dass nach jeder Aktion eine beliebige Audiodatei aus dem gespeicherten Ordner abspielt.
+0976.mp3|Rechnen lernen. Ein Spiel in dem man Rechenaufgaben gestellt bekommt und diese lösen muss.
+0979.mp3|Soll das erste Puzzle Teil gespeichert bleiben? Dann Wähle Ja. Oder soll das erste Puzzleteil jedes Mal neu aufgelegt werden? Dann wähle Nein
+0980.mp3|Soll diese Modifikation auch bei Neustart noch aktiv sein?
+0981.mp3|Warte! Ich konnte deinen Fortschritt nicht speichern! Bitte lege die Karte nochmal auf.
+0982.mp3|Fortschritt gespeichert!
+0983.mp3|Soll der Fortschritt gespeichert werden?
+0986.mp3|Wähle einen Schutz mit der Vor- und Zurücktaste aus. Mit Pause bestätigen.
+0987.mp3|Kein Schutz. Das Adminmenü kann jederzeit durch drücken von allen drei Tasten aktiviert werden.
+0988.mp3|Nur Adminkarte. Das Adminmenü kann nur mit einer Adminkarte geöffnet werden. Eine neue Adminkarte kann jederzeit angelernt werden.
+0989.mp3|Welche Funktionsweise sollen die Vor- und Zurücktasten haben? Es gibt die Möglichkeit die Lautstärke mit einem kurzen Tastendruck und den Titelwechsel mit einem langen Tastendruck zu konfigurieren. Oder entsprechend umgekehrt.
+0990.mp3|Lautstärke langer Tastendruck , Titeländern kurzer Tastendruck 
+0991.mp3|Lautstärke kurzer Tastendruck , Titeländern langer Tastendruck
+0992.mp3|Diese Einstellung ist nur in der drei Tasten Variante ohne Drehencoder verfügbar. In der fünf Tasten Variante müssen die Eingänge am Controller getauscht werden.
+0998.mp3|Das Invertieren der Tasten ist nur im Drei-Tasten-Modus möglich. Im Fünf-Tasten-Modus, müssen die Hardware Eingänge getauscht werden. 
+0999.mp3|Gelöscht!
