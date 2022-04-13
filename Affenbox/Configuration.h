@@ -33,8 +33,8 @@
 *Sample Classic
 */
 #define buttonPause A0
-#define buttonUp A1 
-#define buttonDown A2
+// #define buttonUp A1 
+// #define buttonDown A2
 
 
 /**
@@ -234,7 +234,7 @@ static const uint8_t ANALOG_INPUT_BUTTON_MAP[ANALOG_INPUT_BUTTON_COUNT + 1 ] = {
 *Für genauere Debugausgaben im seriellen Monitor.
 *!Achtung! Benötigt viel Speicher, eventuell müssen andere Funktionen temporär deaktivert werden!
 */
-#define ANALOG_INPUT_PRINT
+// #define ANALOG_INPUT_PRINT
 
 /*
 *Gibt die analogen Werte so schnell wieder wie möglich. 
@@ -398,7 +398,7 @@ static const uint8_t ANALOG_INPUT_BUTTON_MAP[ANALOG_INPUT_BUTTON_COUNT + 1 ] = {
 /*
 *Aktiviert Standard Debug Asugaben
 */
-#define DEBUG  
+// #define DEBUG  
 
 /*
 *Aktiviert Shortcut Debug Ausgaben
