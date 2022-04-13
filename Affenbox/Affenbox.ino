@@ -2025,6 +2025,13 @@ static void nextTrack(uint8_t track, bool force /* = false */)
       break;
 
     case AudioBook:
+      numTracksInFolder = mp3.getFolderTrackCount(myFolder->folder);
+#ifdef DEBUG
+      Serial.print(F("current track: "));
+      Serial.println(currentTrack);
+      Serial.print(F("tracks in folder: "));
+      Serial.println(numTracksInFolder);
+#endif
       if (currentTrack < numTracksInFolder)
       {
         currentTrack = currentTrack + 1;
