@@ -11,67 +11,67 @@ class Mp3Notify
       {
         case DfMp3_Error_Busy:
           {
-            Serial.print(F("busy"));
+            Serial.println(F("busy"));
             break;
           }
         case DfMp3_Error_Sleeping:
           {
-            Serial.print(F("sleep"));
+            Serial.println(F("sleep"));
             break;
           }
         case DfMp3_Error_SerialWrongStack:
           {
-            Serial.print(F("serial stack"));
+            Serial.println(F("serial stack"));
             break;
           }
         case DfMp3_Error_CheckSumNotMatch:
           {
-            Serial.print(F("checksum"));
+            Serial.println(F("checksum"));
             break;
           }
         case DfMp3_Error_FileIndexOut:
           {
-            Serial.print(F("file index"));
+            Serial.println(F("file index"));
             break;
           }
         case DfMp3_Error_FileMismatch:
           {
-            Serial.print(F("file mismatch"));
+            Serial.println(F("file mismatch"));
             break;
           }
         case DfMp3_Error_Advertise:
           {
-            Serial.print(F("advertise"));
+            Serial.println(F("advertise"));
             break;
           }
         case DfMp3_Error_RxTimeout:
           {
-            Serial.print(F("rx timeout"));
+            Serial.println(F("rx timeout"));
             break;
           }
         case DfMp3_Error_PacketSize:
           {
-            Serial.print(F("packet size"));
+            Serial.println(F("packet size"));
             break;
           }
         case DfMp3_Error_PacketHeader:
           {
-            Serial.print(F("packet header"));
+            Serial.println(F("packet header"));
             break;
           }
         case DfMp3_Error_PacketChecksum:
           {
-            Serial.print(F("packet checksum"));
+            Serial.println(F("packet checksum"));
             break;
           }
         case DfMp3_Error_General:
           {
-            Serial.print(F("general"));
+            Serial.println(F("general"));
             break;
           }
         default:
           {
-            Serial.print(F("unknown"));
+            Serial.println(F("unknown"));
             break;
           }
       }
@@ -111,6 +111,7 @@ class Mp3Notify
     }
     static void OnPlayFinished(DfMp3_PlaySources source, uint16_t track)
     {
+      myTrigger.trackFinished |= true;
       nextTrack(track);
     }
 };
@@ -1961,8 +1962,6 @@ static void nextTrack(uint8_t track, bool force /* = false */)
     }
   }
 
-  //disablestandbyTimer();
-
   switch (myFolder->mode)
   {
     case AudioDrama:
@@ -1981,7 +1980,7 @@ static void nextTrack(uint8_t track, bool force /* = false */)
       }
       else
       {
-        resetCurrentCard();
+        Serial.println(F("album end"));
         return;
       }
       break;
@@ -1996,7 +1995,7 @@ static void nextTrack(uint8_t track, bool force /* = false */)
       }
       else
       {
-        resetCurrentCard();
+        Serial.println(F("album end"));
         return;
       }
       break;
@@ -2039,8 +2038,8 @@ static void nextTrack(uint8_t track, bool force /* = false */)
       }
       else
       {
-        writeCardMemory(firstTrack, !isPlaying());
-        resetCurrentCard();
+        writeCardMemory(firstTrack, !isPlaying());    
+        Serial.println(F("audiobook end"));
         return;
       }
 
@@ -2053,8 +2052,8 @@ static void nextTrack(uint8_t track, bool force /* = false */)
       }
       else
       {
-        writeCardMemory(firstTrack, !isPlaying());
-        resetCurrentCard();
+        writeCardMemory(firstTrack, !isPlaying());   
+        Serial.println(F("audiobook end"));     
         return;
       }
       break;
@@ -2117,20 +2116,6 @@ static void previousTrack()
   switch (myFolder->mode)
   {
     case Album:
-      if (currentTrack > 1)
-      {
-        currentTrack = currentTrack - 1;
-        if (myFolder->special3 > 0 && currentTrack != 0)
-        {
-          writeCardMemory(currentTrack);
-        }
-      }
-      else
-      {
-        return;
-      }
-
-      break;
     case Album_Section:
       if (currentTrack > firstTrack)
       {
@@ -2143,6 +2128,7 @@ static void previousTrack()
       else
       {
         return;
+        Serial.println(F("album start"));
       }
 
       break;
@@ -2171,7 +2157,7 @@ static void previousTrack()
       break;
 
     case AudioBook:
-      if (currentTrack > 1)
+      /*if (currentTrack > 1)
       {
         currentTrack = currentTrack - 1;
       }
@@ -2181,7 +2167,7 @@ static void previousTrack()
       }
       // Fortschritt im EEPROM abspeichern
       writeCardMemory(currentTrack);
-      break;
+      break;*/
 
     case AudioBook_Section:
       if (currentTrack > firstTrack)
@@ -2191,6 +2177,7 @@ static void previousTrack()
       else
       {
         currentTrack = firstTrack;
+       Serial.println(F("audiobook start"));
       }
       // Fortschritt im EEPROM abspeichern
       writeCardMemory(currentTrack);
@@ -2477,7 +2464,7 @@ void readButtons(bool invertVolumeButtons = false)
  
   myTrigger.cancel |= pauseButton.pressedFor(LONGER_PRESS) &&
                       !upButton.isPressed() && !downButton.isPressed();
-  myTrigger.pauseTrack |= pauseButton.wasReleased() && myTriggerEnable.cancel;
+  myTrigger.pauseTrack |= pauseButton.wasReleased() ;//&& myTriggerEnable.cancel;
   
 #if defined buttonPower
   myTrigger.shutDown |= powerButton.pressedFor(LONGER_PRESS);
@@ -2948,6 +2935,7 @@ void pauseAction(bool fromCard /* = false */)
 //////////////////////////////////////////////////////////////////////////
 void shutDownAction()
 {
+  #if defined AiO || defined PUSH_ON_OFF
   if (myTriggerEnable.shutDown == true)
   {
     myTriggerEnable.shutDown = false;
@@ -2963,6 +2951,7 @@ void shutDownAction()
     }
     shutDown();
   }
+  #endif
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -3148,6 +3137,7 @@ void adminMenu(bool fromCard /* = false */)
     if (subMenu == Exit)
     {
       writeSettings();
+      waitForTrackToFinish();
       return;
     }
     else if (subMenu == ResetCard)
@@ -4544,7 +4534,7 @@ void shutDown()
 
   mp3Pause();
 
-#if defined POWER_ON_LED
+#if defined POWER_ON_LED_PIN
   digitalWrite(POWER_ON_LED_PIN, LOW);
 #endif
 
@@ -4563,12 +4553,14 @@ void shutDown()
   // verstärker aus
   digitalWrite(8, HIGH);
 
-#elif defined SPEAKER_SWITCH
+#elif defined SPEAKER_SWITCH_PIN
   digitalWrite(SPEAKER_SWITCH_PIN, LOW);
 #endif
 
-#if not defined AiO
-#if defined PUSH_ON_OFF
+#if defined AiO
+digitalWrite(7, LOW);
+#else
+#if defined PUSH_ON_OFF_PIN
   digitalWrite(PUSH_ON_OFF_PIN, HIGH);
 #endif
   // enter sleep state
@@ -4580,10 +4572,7 @@ void shutDown()
 
   set_sleep_mode(SLEEP_MODE_PWR_DOWN);
   cli(); // Disable interrupts
-  sleep_mode();
-
-#else
-  digitalWrite(7, LOW);
+  sleep_mode();  
 #endif
 }
 

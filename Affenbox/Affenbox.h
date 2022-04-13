@@ -58,9 +58,9 @@ static const uint16_t EEPROM_size = 512;
 static const uint16_t EEPROM_settingsStartAdress = 1;
 
 #if defined ANALOG_INPUT
-static const uint8_t availableShortCuts = 3 + ANALOG_INPUT_BUTTON_COUNT; //Die Anzahl Inputs einer 3x4 Matrix oder eines 0-9,#,* Tastenfeldes
+static const uint8_t availableShortCuts = 2 + ANALOG_INPUT_BUTTON_COUNT; //Die Anzahl Inputs einer 3x4 Matrix oder eines 0-9,#,* Tastenfeldes
 #else
-static const uint8_t availableShortCuts = 3 ; //
+static const uint8_t availableShortCuts = 2 ; //
 #endif
 ///////// setup buttons //////////////////////////////////////////////////
 Button pauseButton(buttonPause);
@@ -88,6 +88,7 @@ enum Enum_Trigger {
   ShutDownTrigger,
   AdminMenuTrigger,
   ResetTrackTrigger,
+  TrackFinishedTrigger,
   ShortcutTrigger //muss an letzter Stelle stehen bleiben!
 };
 
@@ -104,6 +105,7 @@ struct inputTrigger {
   bool shutDown;
   bool adminMenu;
   bool resetTrack;
+  bool trackFinished;
   bool shortCutNo [availableShortCuts]; //muss an letzter Stelle stehen bleiben!
 };
 
@@ -287,7 +289,7 @@ void mp3Pause(uint16_t delayTime = 100);
 void waitForTrackToFinish (bool interruptByTrigger = true, uint16_t timeOut = 5000);
 void waitForTrackToStart(uint16_t timeOut = 5000);
 void setup();
-void readButtons();
+void readButtons(bool invertVolumeButtons = false);
 #if defined IRREMOTE
 void readIr ();
 #endif

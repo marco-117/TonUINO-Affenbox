@@ -1,60 +1,12 @@
-ToDo:
-   #########################Open#########################  
- 
-   Minor Hörbuch nach ende des letzten Tracks, wenn Titel nicht auf Karte gespeichert, keine Ansage
-   Minor Trackspeicher, Fehlerhafte abhandlung wenn Track nicht gespeichert und karte wieder erwartet wird.
-
    #########################ToDo########################
+   next Track handling verbessern, DFPlayer Meldung als input trigger behandeln
+   Verbesserung des zufall generators
+   A/B Seite
    Alterssperre
    Sleepmodifier, Lautstärke ausfaden lassen
    Neopixel LED als Status einfügen
-   Always Queue
+   Always Queue, verienfachung next & prevTrack
    Jukebox Modifier: Rndom Track bis RFID aufgelegt, dann einen Track aus RFID und weiter mit Random
    Memory: Modifier karte, die mit einem Satz memory RFID Tags mehrere Motive zulässt
-
-   #########################Done#########################
-      -OK-:IR: Anlernen falsche Sprachausgaben
-      -OK-:IR: Anlernen fehlerhaft, alle Buttons = pause
-      -OK-:voiceMenu: NextTrack wird ausgeführt und Titel angespielt.
-      -OK-:Modifier: Caluclate Spiel fehlerhaft, Eingabe nur in 10er Schritten
-      -OK-:Album mit Speicher: Wenn letzter Titel erreicht, wird bei langem Druck der ShortCut, statt next Track ausgeführt
-      -OK-:Trackspeicher: Bei Neuauflegen einer Karte mit Speicher und ungespeichertem Inhalt -> wenn pause: Ansage, das speicher nicht geschrieben wurde -> wenn play, kein Neustart!
-      -OK-:Modifier: Konfiguration falsch, nur 10 Optionen
-      -OK-:Trackspeicher: Album lesen oder schreiben der Track nummer falsch -> Gelichzeitiges Auslösen von Next/previous mit dem aktuellen shortcut, DANACH ausführen des neuen ShortCuts
-      -OK-:Trackspeicher: Short Cut Fortschritt wird nicht in EEPROM geschrieben
-      -OK-:Trackspeicher: Short Cut Hörbuch, bei wiederaufnehemen des Tracks, wird der folge Track gespielt
-      -OK-:voiceMenu: Abbruchausgabe wird nicht gespielt -> muss getestet werden
-      -OK-:voiceMenu: 1 vor/zurück nur durch langen Druck
-      -OK-:voiceMenu: besseres Handling mit waitforTrackToFinish
-      -OK-:AdminMenu abbruch Menu
-      -OK-:voiceMenu: next Track wird ausgeführt
-      -OK-:ShortCut: wird ausgeführt, trotz laufendem Track
-      -OK-:ShortCut: "Oh ein neuer ShortCut" Ansage kommt nicht -> waitForTrackToFinish Abbruch durch PAuse; alle Tasten haben stat wasReleaased SHORT_PRESS erhalten
-      -OK-:Short Cut: Short Cut 0 lässt keine Steuerung zu, kein next Track
-      -OK-:Short Cut: Modifier entfernen falls einer aktiv ->Bug mit delete activeModifer?
-      -OK-:loop: InvertVolume Button führt zu komischen verhalten, bei langem DRuck von Tasten im 3 Button modus
-      -OK-:Buttons: Longpress führt auch Shortpress aus
-      -OK-:Karte anlernen Album von bis, keine Speicher abfrage.
-      -OK-:Major Lock & Toddler Modifier verhindert nicht das starten von ShortCuts
-      -OK-:Major ButtonSmash Aktuell laufender Track wird nicht beendet und kann dann auch nicht mehr beendet werden
-      -OK-:Major Repeat  Mofifer kein next Track auf befehl
-      -OK-:Mainor: Kindergarten Modifier startet keine Wiedergabe, wenn im Leerlauf aktiviert.
-      -OK-: Minor: Puzzel/Quiz Feedbacksound fehlerhaft
-      -OK- Minor: Shortcut enable in Puzzle/Quiz
-      -OK-: Minor: Queue Probleme in Quiz, Fragen werden widerholt
-      -OK-: Minor: Erstellung Puzzle Karte, Teil speicher verdreht?
-      -OK-: Major: Pause wenn Kart weg ohne Funktion.
-      -OK-: Major: Wenn Pause wenn Karte weg aktiv, next Track und Play ohne Funktion, wenn Kart weg -> knownCard = false pause Trigger triggert pause nicht
-      -OK-: Update: Rotary Encoder without Interrupts, usable with nearly all Pins
-      -OK-: Update: Standard IR Remote werte ergänzt
-      -OK-:Major: Quiz, bei aUflegen einer Antwort wird der Track der Antwort übernommen und die nächste Frage ist Antwort +1
-      -OK-:Critical: Lautstärke auf langem Druck, wird nur um eins erhöht pro Druck
-      -OK-: Major: unprogrammierter Shortcut löscht Karte
-      -OK-:Minor: Default AnalogIn Werte passen nicht zur Buttonplatine
-      -OK-:Minor: Puzzle & Quiz, vorheriger Abspielmodus wird nicht unterbrochen
-      -OK-: Major: Satischer Analoger input, Anlernprozedur falsch. EIngang wird direkt übernommen, anstatt auf wechsel zu warten, bzw sollte stellung bestätigt werden.
-      -OK-: Major: statischer analoger input, falsche Erkennung der Zustände, Bsp. Admin MEnü erst bei wechsel erkannt.
-      -OK-: Major: satischer analoger Input blockiert restlich Inputs, neu Bibliothek könnte ventuell helfen?
-      -OK-:Add: Startansage Puzzle/Quiz, ähnlich Rechnen lernen
-      -OK-:Test: New Rotray Encoder with AiO
-   
+   Impulswahltelefon
+   Sleepmodifier mit definierter Lautstärke
