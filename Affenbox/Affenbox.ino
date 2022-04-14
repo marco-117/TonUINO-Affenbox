@@ -4637,14 +4637,13 @@ uint16_t getFolderTrackCount(uint16_t folder)
   }
 
 #if defined hasGB3200B
-  playTrack(folder, TRACKNUMBER_SILENCE);
-  delay(100);
-  pause();
+  mp3.playFolderTrack(folder, TRACKNUMBER_SILENCE);
+  mp3Pause(1000);
 #endif
 
   uint16_t trackCount = mp3.getFolderTrackCount(folder);
+
   // save track count for this folder
-  uint8_t index = folder - 1;
   tracksInFolder[index] = trackCount;
   return trackCount;
 }
