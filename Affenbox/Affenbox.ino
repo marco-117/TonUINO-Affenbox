@@ -4631,6 +4631,7 @@ uint16_t getFolderTrackCount(uint16_t folder)
 {
   // return count from last request
   uint8_t index = folder - 1;
+  uint8_t trackModifier = 0;
   if (tracksInFolder[index] > 0)
   {
     return tracksInFolder[index];
@@ -4639,9 +4640,10 @@ uint16_t getFolderTrackCount(uint16_t folder)
 #if defined hasGB3200B
   mp3.playFolderTrack(folder, TRACKNUMBER_SILENCE);
   mp3Pause(1000);
+  trackModifier = 1;
 #endif
 
-  uint16_t trackCount = mp3.getFolderTrackCount(folder);
+  uint16_t trackCount = mp3.getFolderTrackCount(folder) - trackModifier;
 
   // save track count for this folder
   tracksInFolder[index] = trackCount;
