@@ -111,6 +111,19 @@ public:
   }
   static void OnPlayFinished(DfMp3_PlaySources source, uint16_t track)
   {
+#if defined hasGB3200B
+    if (isAdvertPlaying)
+    {
+#if defined DEBUG
+      Serial.println(F("hasGB3200B isAdvertPlaying"));
+#endif
+      isAdvertPlaying = false;
+      return;
+    }
+#endif
+#if defined DEBUG
+    Serial.println(F("OnPlayFinished"));
+#endif
     myTrigger.trackFinished |= true;
     nextTrack(track);
   }
@@ -512,7 +525,7 @@ public:
 #endif
       if (isPlaying())
       {
-        mp3.playAdvertisement(301);
+        playAdvertisement(301);
         delay(500);
       }
       setNextStopAtMillis();
@@ -526,7 +539,7 @@ public:
     if (isPlaying())
     {
       delay(1000);
-      mp3.playAdvertisement(300);
+      playAdvertisement(300);
       delay(500);
     }
     setNextStopAtMillis();
@@ -4139,7 +4152,7 @@ bool SetModifier(folderSettings *tmpFolderSettings)
   {
     if (isPlaying())
     {
-      mp3.playAdvertisement(260);
+      playAdvertisement(260);
     }
     else
     {
@@ -4217,7 +4230,7 @@ bool RemoveModifier()
 #endif
   if (isPlaying())
   {
-    mp3.playAdvertisement(261);
+    playAdvertisement(261);
   }
   else
   {
@@ -4235,7 +4248,7 @@ void checkForUnwrittenTrack()
     // ungespeicherter Track vorhanden und keine Karte vorhanden
     if (isPlaying())
     {
-      mp3.playAdvertisement(981);
+      playAdvertisement(981);
     }
     else
     {
@@ -4411,7 +4424,7 @@ Enum_PCS handleCardReader()
         {
           mp3.start();
           delay(150);
-          mp3.playAdvertisement(982);
+          playAdvertisement(982);
           waitForTrackToFinish();
           delay(100);
           mp3.pause();
@@ -4650,3 +4663,10 @@ uint16_t getFolderTrackCount(uint16_t folder)
   return trackCount;
 }
 //////////////////////////////////////////////////////////////////////////
+void playAdvertisement(uint16_t track)
+{
+  mp3.playAdvertisement(track);
+#if defined hasGB3200B
+  isAdvertPlaying = true;
+#endif
+}

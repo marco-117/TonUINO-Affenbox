@@ -345,3 +345,6 @@ static uint16_t tracksInFolder[99];
 static const uint8_t TRACKNUMBER_SILENCE = 0;
 
 uint16_t getFolderTrackCount(uint16_t folder);
+#if defined hasGB3200B
+static bool isAdvertPlaying = false;
+#endif
