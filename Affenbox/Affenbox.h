@@ -312,7 +312,7 @@ void loop();
 void adminMenu(bool fromCard = false);
 uint8_t voiceMenu(int16_t numberOfOptions, uint16_t startMessage, int messageOffset,
                   bool preview = false, uint8_t previewFromFolder = 0, int defaultValue = 0,
-                  bool enableSkipTen = false);
+                  bool enableSkipTen = true);
 bool setupFolder(folderSettings * theFolder) ;
 void setupShortCut(int8_t shortCutNumber = -1);
 void setupCard();

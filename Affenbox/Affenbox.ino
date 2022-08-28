@@ -2993,8 +2993,9 @@ void adminMenuAction()
 //////////////////////////////////////////////////////////////////////////
 void loop()
 {
-  checkStandbyAtMillis();
+  //19.8.22 Change order of mp3.loop and checkStanbyAtMillis to prevent unexpected shutdowns
   mp3.loop();
+  checkStandbyAtMillis();  
 
 #if defined FADING_LED
   fadeStatusLed(isPlaying());
