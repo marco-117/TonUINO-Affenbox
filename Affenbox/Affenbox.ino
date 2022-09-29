@@ -4134,6 +4134,7 @@ bool SetModifier(folderSettings *tmpFolderSettings)
     else
     {
       PlayMp3FolderTrack(260);
+      resetCurrentCard();
     }
     waitForTrackToFinish();
   }
@@ -4214,6 +4215,7 @@ bool RemoveModifier()
     mp3Pause();
     PlayMp3FolderTrack(261);
     waitForTrackToFinish();
+    resetCurrentCard();
   }
   return false;
 }
