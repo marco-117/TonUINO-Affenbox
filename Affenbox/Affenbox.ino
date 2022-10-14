@@ -2975,18 +2975,26 @@ void adminMenuAction()
   if (myTriggerEnable.adminMenu == true)
   {
     myTriggerEnable.adminMenu = false;
-    if (activeModifier != NULL)
+    if (checkAdminMenuLocked())
     {
-      if (activeModifier->handleAdminMenu() == true)
-      {
-#if defined DEBUG
-        Serial.println(F("admin menu act lckd"));
-#endif
-        return;
-      }
+      return;
     }
     adminMenu();
   }
+}
+bool checkAdminMenuLocked()
+{
+  if (activeModifier != NULL)
+  {
+    if (activeModifier->handleAdminMenu() == true)
+    {
+#if defined DEBUG
+      Serial.println(F("admin menu act lckd"));
+#endif
+      return true;
+    }
+  }
+  return false;
 }
 //////////////////////////////////////////////////////////////////////////
 void loop()
@@ -3010,18 +3018,21 @@ void loop()
   if (myTrigger.adminMenu)
   {
     myTriggerEnable.adminMenu = false;
-    mp3Pause();
-    do
+    if (!checkAdminMenuLocked())
     {
-      readTrigger();
-      if (myTrigger.noTrigger && myTriggerEnable.noTrigger)
+      mp3Pause();
+      do
       {
-        myTriggerEnable.noTrigger = false;
-        break;
-      }
+        readTrigger();
+        if (myTrigger.noTrigger && myTriggerEnable.noTrigger)
+        {
+          myTriggerEnable.noTrigger = false;
+          break;
+        }
 
-    } while (true);
-    adminMenuAction();
+      } while (true);
+      adminMenuAction();
+    }
   }
 
   //Springe zum ersten Titel zurück
