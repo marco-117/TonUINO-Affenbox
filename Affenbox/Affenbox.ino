@@ -2355,7 +2355,9 @@ void setup()
   IrReceiver.begin(IRREMOTE_PIN, DISABLE_LED_FEEDBACK);
 #endif
 
-#if defined POWER_ON_LED
+#if defined FADING_LED
+  analogWrite(POWER_ON_LED_PIN, 255);
+  #elif defined POWER_ON_LED
   pinMode(POWER_ON_LED_PIN, OUTPUT);
   digitalWrite(POWER_ON_LED_PIN, LOW);
 #endif
@@ -4578,17 +4580,11 @@ void fadeStatusLed(bool isPlaying)
   static bool statusLedDirection = false;
   static int16_t statusLedValue = 255;
   static unsigned long statusLedOldMillis;
-  static int16_t statusLedDeltaValuePause = 500;
-  static int16_t statusLedDeltaValuePlay = 1;
   static int16_t statusLedDeltaValue = 10;
 
   if (isPlaying)
   {
-    statusLedDeltaValue = statusLedDeltaValuePlay;
-  }
-  else
-  {
-    statusLedDeltaValue = statusLedDeltaValuePause;
+    statusLedValue = 255;
   }
 
   if ((millis() - statusLedOldMillis) >= 100)
