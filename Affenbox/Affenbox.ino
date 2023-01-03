@@ -4584,7 +4584,7 @@ void fadeStatusLed(bool isPlaying)
 
   if (isPlaying)
   {
-    statusLedDeltaValue = 255;
+    statusLedValue = 255;
   }
 
   if ((millis() - statusLedOldMillis) >= 100)
