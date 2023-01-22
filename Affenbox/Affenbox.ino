@@ -1879,6 +1879,9 @@ void playFolder()
   }
 
   waitForTrackToStart();
+#if defined DISPLAY  
+  showTrackOnDisplay();
+#endif  
 }
 
 void activateShortCut(uint8_t shortCutNo)
@@ -2062,6 +2065,9 @@ static void nextTrack(uint8_t track, bool force /* = false */)
     Serial.println(currentTrack);
 #endif
   }
+#if defined DISPLAY
+  showTrackOnDisplay();
+#endif
 }
 
 static void previousTrack()
@@ -2190,6 +2196,9 @@ static void previousTrack()
     Serial.println(currentTrack);
 #endif
   }
+#if defined DISPLAY
+  showTrackOnDisplay();
+#endif
 }
 //////////////////////////////////////////////////////////////////////////
 bool isPlaying()
@@ -2311,6 +2320,15 @@ void setup()
 #if defined FIVEBUTTONS
   pinMode(buttonFourPin, INPUT_PULLUP);
   pinMode(buttonFivePin, INPUT_PULLUP);
+#endif
+
+#if defined DISPLAY
+  myDisplay.init();
+  myDisplay.set(DISPLAY_BRIGHTNESS);
+  myDisplay.point(0);
+  //show "--" on display to give some feedback during startup
+  myDisplay.display(1, 0x34);
+  myDisplay.display(2, 0x34);
 #endif
 
 #if defined IRREMOTE
@@ -2753,6 +2771,9 @@ void volumeUpAction(bool rapidFire /* = false */)
           delay(75);
         }
       }
+#if defined DISPLAY
+      showVolumeOnDisplay(volume);
+#endif
 #if defined DEBUG
       Serial.print(F("vol up "));
       Serial.println(volume);
@@ -2789,6 +2810,9 @@ void volumeDownAction(bool rapidFire /* = false */)
           delay(75);
         }
       }
+#if defined DISPLAY
+      showVolumeOnDisplay(volume);
+#endif
 #if defined DEBUG
       Serial.print(F("vol down "));
       Serial.println(volume);
@@ -2946,6 +2970,14 @@ void loop()
 
 #if defined FADING_LED
   fadeStatusLed(isPlaying());
+#endif
+
+#if defined DISPLAY
+  if(volumeIsShown && millis() > volumeTimer){
+    //switch back from volume to track
+    volumeIsShown = false;
+    showTrackOnDisplay();
+  }
 #endif
 
   readTrigger(mySettings.invertVolumeButtons);
@@ -4533,5 +4565,44 @@ void fadeStatusLed(bool isPlaying)
     analogWrite(POWER_ON_LED_PIN, statusLedValue);
   }
 }
+#endif
+//////////////////////////////////////////////////////////////////////////
+#if defined DISPLAY
+void showTrackOnDisplay(){
+  //clear
+  myDisplay.clearDisplay();
+  myDisplay.point(0);
+
+  //write new track
+  int digit0 = currentTrack / 100;
+  int digit1 = currentTrack / 100;
+  int digit2 = currentTrack / 10;
+  int digit3 = currentTrack % 10;
+
+  if(digit0 > 0){
+    myDisplay.display(0, digit0);
+  }
+  if(digit1 > 0){
+    myDisplay.display(1, digit1);
+  }
+  if(digit2 > 0){
+    myDisplay.display(2, digit2);
+  }
+  myDisplay.display(3, digit3);
+} 
+
+void showVolumeOnDisplay(int volume){
+  //clear
+  myDisplay.clearDisplay();
+  myDisplay.point(0);
+
+  //write new volume
+  myDisplay.display(0, volume / 10);
+  myDisplay.display(1, volume % 10);
+
+  //start timer for 1 second, so display will switch back to currentTrack
+  volumeIsShown = true;
+  volumeTimer = millis() + 1000; // 1000ms = 1s 
+} 
 #endif
 //////////////////////////////////////////////////////////////////////////

@@ -14,6 +14,9 @@
 #if defined IRREMOTE
 #include <IRremote.h>
 #endif
+#if defined DISPLAY
+#include "TM1637.h"
+#endif
 
 using ace_button::AceButton;
 using ace_button::ButtonConfig;
@@ -118,6 +121,14 @@ const uint8_t irRemoteCodeCount = sizeOfInputTrigger;
 //////// Rotary Encoder ///////////////////////////////////////////////
 #if defined ROTARY_ENCODER
 Encoder myEnc(ROTARY_ENCODER_PIN_A, ROTARY_ENCODER_PIN_B);
+#endif
+//////////////////////////////////////////////////////////////////////////
+
+//////// 7-Segmentanzeige ////////////////////////////////////////////////
+#if defined DISPLAY
+TM1637 myDisplay(DISPLAY_PIN_A, DISPLAY_PIN_B);
+bool volumeIsShown = false;
+uint32_t volumeTimer = 0;
 #endif
 //////////////////////////////////////////////////////////////////////////
 

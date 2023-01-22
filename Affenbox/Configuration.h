@@ -261,6 +261,34 @@ static const uint8_t ANALOG_INPUT_BUTTON_MAP[ANALOG_INPUT_BUTTON_COUNT + 1 ] = {
 
 #endif
 
+//===========================================================================
+//============================ 7-Segment-Anzeige ============================
+//===========================================================================
+/**
+*Gibt die Möglichkeit Informationen über eine 7-Segmentanzeige auszugeben
+*Hierzu wird extra Hardware benötigt, z.B.:
+TM1637 4 Digit 7-Segment Display
+https://www.az-delivery.de/products/4-digit-display
+*/
+
+#define DISPLAY   
+
+#if defined DISPLAY
+
+/* 
+*Angabe der Anschlusspins für den DIO und CLK des Displays
+*Es kann jeder freie  Pin gewählt werden, auch analoge.
+*Ausgeschlossen sind folgende Pins: 4, 9, 10, A7, sowie bereits durch andere Funktionen vergebene Pins.
+ */
+#define DISPLAY_PIN_A A15 //CLK
+#define DISPLAY_PIN_B A13 //DIO
+
+/* 
+Helligkeit des Displays
+ */
+#define DISPLAY_BRIGHTNESS 2
+
+#endif
 
 //===========================================================================
 //===================== POWER_ON_LED(EXPERIMENTEL!!) ========================
